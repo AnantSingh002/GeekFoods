@@ -8,38 +8,97 @@
     height: 10vh;
     width: 100vw;
     color: white;
-    background-color: navy;
+    background-color: #111827;
     position: fixed;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    z-index: 1;
+    z-index: 100;
     /* justify-content: center; */
 }
 
-li{
-    text-decoration: none;
+.logo{
+    display: flex;
+    gap: 20px;
 }
+
 
 .list ul{
     display: flex;
-    text-decoration: none;
     justify-content: space-evenly;
     gap: 30px;
+    list-style: none;
 }
+
+.list ul li:hover{
+    color: blue;
+}
+
+.button button{
+    background-color: blue;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    border: none;
+}
+
+.button button:hover{
+    background-color: rgb(6, 6, 165);
+}
+
 
 .content{
     position: relative;
 }
 
-.content div{
+.box{
     position: absolute;
-    left: 10vw;
+    left: 5vw;
     top: 30vh;
     background-color: transparent;
-    height: 300px;
-    width: 300px;
+    min-height: 300px;
+    min-width: 300px;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     /* opacity: 0.2; */
+}
+
+.content h1{
+    font-size: 3rem;
+    font-weight:bolder;
+}
+
+.content h2{
+    color: #BE123C;
+    font-size: 3rem;
+    /* font-weight: 300; */
+}
+.content p{
+    font-size: medium;
+    /* font-weight: bold; */
+}
+
+#search{
+    background-color: #BE123C;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-right: 50px;
+    border: none;
+    width: 150px;
+    
+}
+
+#knowMore{
+    background-color: white;
+    color: #BE123C;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    width: 150px;
 }
 
 .content img{
@@ -51,18 +110,17 @@ li{
     display: flex;
     position: relative;
     margin-top: 50px;
-    /* margin: auto; */
-    /* padding: 100px; */
+   
+    max-height: 100vh;
+    max-width: 100%;
+    
 }
 
-/* .house{
-    height: 500px;
-    width: 500px;
-} */
+
 .house img{
     height: 500px;
     width: 48vw;
-    position: absolute;
+    position: absolute; /* Make this absolute */
     left: 30px;
     top: 50px;
     z-index: 2;
@@ -71,9 +129,10 @@ li{
 .description{
     height: 600px;
     width: 55vw;
-    background-color: rgb(212, 208, 208);
-    position: absolute;
-    right: 30px;
+    background-color: #F3F4F6;
+    position: relative;
+    margin-right: 30px;
+    left: 41vw;
     /* display: flex;
     flex-direction: column;
     align-items: center;
@@ -96,15 +155,133 @@ li{
     
 }
 
-.cards{
-    height: 100vh;
-    width: 100%;
-    background-color: rgb(238, 27, 27);
+#inTouch{
+    /* height: 100px; */
+    width: 150px;
+    padding: 10px;
+    background-color:#4F46E5;
+    color: white;
+    border-radius: 5px;
+    border: transparent;
 }
 
-.cards div{
-    height: 100px;
-    width: 100px;
+#inTouch:hover{
+    background-color: #F3F4F6;
+    color: #4F46E5;
+    border: 1px solid #4F46E5; 
+
 }
+
+
+  .masonry{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 50px;
+  }
+
+  #c1{
+    height: 300px;
+    max-width: 400px;
+  }
+
+  #c2{
+    height: 220px;
+    width: 400px;
+  }
+
+  #c3{
+    height: 180px;
+    width: 400px;
+  }
+
+  #c4{
+    height: 250px;
+    width: 400px;
+  }
+
+  #c5{
+    height: 220px;
+    width: 400px;
+    position: relative;
+    top: -60px;
+  }
+
+  #c6{
+    height: 200px;
+    width: 400px;
+    position: relative;
+    top: -100px;
+  }
+
+  .subDiv{
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    bottom: 20px;
+    
+  }
+
+  .subDiv img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    
+  }
+
+  .name{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card p{
+    background-color: #F9FAFB;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    line-gap-override: 5px;
+  }
+  
+  .card {
+    background: transparent;
+    /* background-color: bisque; */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: relative;
+    
+  }
+
+
+  footer{
+    background-color: #F3F4F6;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 50px;
+  }
+
+  footer img{
+    height: 100px;
+    width: 300px;
+  }
+
+  .des{
+    display: flex;
+    text-align: center;
+    gap: 20px;
+    justify-content: center;
+  }
+  
 
 
